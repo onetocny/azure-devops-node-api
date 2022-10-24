@@ -799,7 +799,7 @@ export interface NotificationSubscription {
      */
     subscriber?: VSSInterfaces.IdentityRef;
     /**
-     * REST API URL of the subscriotion.
+     * REST API URL of the subscription.
      */
     url?: string;
     /**

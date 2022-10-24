@@ -1026,6 +1026,20 @@ export enum TemplateType {
     GlobalWorkflow = 1,
 }
 
+export interface TemporaryQueryRequestModel extends WorkItemTrackingResource {
+    /**
+     * The WIQL text of the query
+     */
+    wiql?: string;
+}
+
+export interface TemporaryQueryResponseModel {
+    /**
+     * The id of the query item.
+     */
+    id?: string;
+}
+
 /**
  * Types of tree node structures.
  */

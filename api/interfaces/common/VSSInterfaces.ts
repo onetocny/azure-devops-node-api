@@ -198,6 +198,41 @@ export interface JsonPatchOperation {
     value?: any;
 }
 
+export interface JsonWebKeyResponse {
+    /**
+     * Gets or sets the 'alg' (KeyType)..
+     */
+    alg?: string;
+    /**
+     * Gets or sets the 'e' (RSA - Exponent)..
+     */
+    e?: string;
+    /**
+     * Gets the key id of the given key.
+     */
+    kid?: string;
+    /**
+     * Gets the key type of key.
+     */
+    kty?: string;
+    /**
+     * Gets or sets the 'n' (RSA - Modulus)..
+     */
+    n?: string;
+    /**
+     * Gets or sets the 'use' (Public Key Use)..
+     */
+    use?: string;
+    /**
+     * Gets the 'x5c' collection (X.509 Certificate Chain)..
+     */
+    x5c?: string[];
+    /**
+     * Gets or sets the 'x5t' (X.509 Certificate SHA-1 thumbprint)..
+     */
+    x5t?: string;
+}
+
 export interface JsonWebToken {
 }
 
@@ -423,6 +458,16 @@ export interface VssNotificationEvent {
      * This is the time the original source event for this VssNotificationEvent was created.  For example, for something like a build completion notification SourceEventCreatedTime should be the time the build finished not the time this event was raised.
      */
     sourceEventCreatedTime?: Date;
+}
+
+/**
+ * Provides the properties for the response of a Jwks Configuration Endpoint
+ */
+export interface VssOidcJwksConfigurationResponse {
+    /**
+     * Gets the Public Keys for the response.
+     */
+    keys?: JsonWebKeyResponse[];
 }
 
 export interface WrappedException {
